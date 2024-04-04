@@ -53,7 +53,7 @@ export function CardCharacter() {
                             <div className="w-20">
                                 <p>Height:</p>
                             </div>
-                            <p className="w-40">{value.height / 100}</p> 
+                            <p className="w-40">{value.height / 100} m</p> 
                         </div>
                         <div className="flex">
                             <div className="w-20">

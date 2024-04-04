@@ -52,14 +52,14 @@ interface CharacterProps {
                             <div className="w-40">
                                 <p className="text-yellow-300">Hair color</p>
                             </div>
-                            <p>{useData?.hair_color === 'n/a' ? 'Não definido' : useData?.hair_color}</p>
+                            <p>{useData?.hair_color === 'n/a' || useData?.hair_color === 'none' ? 'Not defined' : useData?.hair_color}</p>
                         </div>
                         
                         <div className="flex">
                             <div className="w-40">
                                 <p className="text-yellow-300">Gender</p>
                             </div>
-                            <p>{useData?.gender === 'n/a' ? 'Não definido': useData?.gender}</p>
+                            <p>{useData?.gender === 'n/a' ? 'Not defined': useData?.gender}</p>
                         </div>
                         
                     </div>
