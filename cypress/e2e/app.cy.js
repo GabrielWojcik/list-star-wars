@@ -1,15 +1,11 @@
 describe('Navigation', () => {
-    it('should navigate to the about page', () => {
-      // Start from the index page
+    it('should navigate to the people page', () => {
       cy.visit('http://localhost:3000/')
    
-      // Find a link with an href attribute containing "about" and click it
-      cy.get('a[href*="about"]').click()
+      cy.get('a[href*="/people/1"]').click({ multiple: true })
    
-      // The new url should include "/about"
-      cy.url().should('include', '/about')
+      cy.url().should('include', '/people')
    
-      // The new page should contain an h1 with "About"
-      cy.get('h1').contains('About')
+      cy.get('strong').contains('Luke Skywalker')
     })
-  })
+})
