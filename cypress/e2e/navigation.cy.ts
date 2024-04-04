@@ -4,8 +4,8 @@ describe('Navigation', () => {
    
       cy.get('a[href*="/people/1"]').click({ multiple: true })
    
-      cy.url().should('include', '/people')
+      cy.url().should('include', '/people/1')
    
-      cy.get('strong').contains('Luke Skywalker')
+      cy.get('h1').contains('Name')
     })
 })

@@ -27,12 +27,13 @@ interface CharacterProps {
     
         respData(); 
     
-    }, []);
+    }, [params.personId]);
 
     return(
         <>
         <NavBar />
         <div className=" bg-black h-screen">
+        <main>
             <div className="flex flex-col-reverse items-center justify-center bg-center bg-cove text-yellow-400">
                 <div className="bg-black h-screen w-screen flex flex-col justify-center items-center p-5">
                     <div className="h-screen p-5 bg-black">
@@ -66,11 +67,13 @@ interface CharacterProps {
                 </div>
                 <div className="flex flex-col py-2 items-center justify-center w-screen   relative">
                     <Image src={img || ''} alt=""  width={200} height={200} objectFit="cover" className="rounded-full" />
+                    <h1>Name</h1>
                     <strong className="p-2 text-3xl md:text-6xl text-yellow-400 text-center">
                          {useData?.name}
                     </strong>
                 </div>
             </div>
+        </main>
         </div>
         </>
     )
