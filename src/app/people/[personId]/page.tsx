@@ -21,7 +21,7 @@ interface CharacterProps {
             setUseData(data)
             const urlParts = data.url.split('/');
             const personId = urlParts[urlParts.length - 2];
-            const imagePath = `/${personId}.webp`;
+            const imagePath = `/${personId}.jpg`;
             setImg(imagePath)
         }
     

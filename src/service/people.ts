@@ -21,6 +21,14 @@ class starWarsList {
             console.error('error in list character', err)
         }
     }
+    public async listCharacterPage(value: any): Promise<any> {
+        try {
+            const { data } = await apiBase.get(`/people/?page=${value}`)
+            return data
+        } catch (err: any) {
+            console.error('error in list character for page')
+        }
+    }
 
 }
 
