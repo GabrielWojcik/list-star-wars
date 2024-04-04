@@ -33,19 +33,35 @@ interface CharacterProps {
         <>
         <NavBar />
         <div className=" bg-black h-screen">
-            <div className="flex flex-col-reverse items-center justify-center bg-center bg-cove text-yellow-400 md:flex-row">
-                <div className="bg-black h-screen w-screen flex flex-col justify-center items-center md:items-start p-5">
+            <div className="flex flex-col-reverse items-center justify-center bg-center bg-cove text-yellow-400">
+                <div className="bg-black h-screen w-screen flex flex-col justify-center items-center p-5">
                     <div className="h-screen p-5 bg-black">
-                        <p className="text-yellow-300">Birth Data</p>
-                        <p className="text-3xl">{useData?.birth_year}</p>
-                        <p className="text-yellow-300">Eye color</p>
-                        <p className="text-3xl">{useData?.eye_color}</p>
-                        <p className="text-yellow-300">Clothing Color</p>
-                        <p className="text-3xl">{useData?.skin_color}</p>
-                        <p className="text-yellow-300">Hair color</p>
-                        <p className="text-3xl">{useData?.hair_color === 'n/a' ? 'Não definido' : useData?.hair_color}</p>
-                        <p className="text-yellow-300">Gender</p>
-                        <p className="text-3xl">{useData?.gender === 'n/a' ? 'Não definido': useData?.gender}</p>
+                        <div className="flex">
+                            <div className="w-40">
+                                <p className="text-yellow-300">Birth Data</p>
+                            </div>
+                            <p>{useData?.birth_year}</p>
+                        </div>
+                        <div className="flex">
+                            <div className="w-40">
+                                <p className="text-yellow-300">Eye color</p>
+                            </div>
+                            <p>{useData?.eye_color}</p>
+                        </div>
+                        <div className="flex">
+                            <div className="w-40">
+                                <p className="text-yellow-300">Hair color</p>
+                            </div>
+                            <p>{useData?.hair_color === 'n/a' ? 'Não definido' : useData?.hair_color}</p>
+                        </div>
+                        
+                        <div className="flex">
+                            <div className="w-40">
+                                <p className="text-yellow-300">Gender</p>
+                            </div>
+                            <p>{useData?.gender === 'n/a' ? 'Não definido': useData?.gender}</p>
+                        </div>
+                        
                     </div>
                 </div>
                 <div className="flex flex-col py-2 items-center justify-center w-screen   relative">
@@ -54,7 +70,6 @@ interface CharacterProps {
                          {useData?.name}
                     </strong>
                 </div>
-                    {/* <Image src={img || ''} alt="" width={400} height={400} objectFit="cover" /> */}
             </div>
         </div>
         </>
