@@ -1,4 +1,4 @@
-import { CardCharacter } from "@/components/home";
+import { CardCharacter } from "@/components/CardCharacter";
 import NavBar from "@/components/navBar";
 export default async function Initial() {
 

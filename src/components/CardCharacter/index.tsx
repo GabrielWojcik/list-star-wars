@@ -20,13 +20,13 @@ export function CardCharacter() {
         <div className="flex flex-wrap items-center justify-center gap-5 p-5 bg-black">
         {
             useData?.map((value: { url: string; name: string; birth_year: string; 
-            height: string; mass: string }) => {
+            height: any; mass: string }) => {
                 const urlParts = value.url.split('/');
                 const personId = urlParts[urlParts.length - 2];
                 const imagePath = `/${personId}.webp`;
                 return(
                     <Link key={value.name} href={`/people/${personId}`}>
-                    <div className="flex flex-col justify-center items-center md:flex-row bg-white text-black rounded border-yellow-500 border-2 cursor-pointer hover:scale-105">
+                    <div className="flex flex-col justify-center items-center md:flex-row bg-gray-400 text-white rounded border-yellow-500 border-2 cursor-pointer hover:scale-105">
                     <div className="w-[150px] h-[200px] relative">
                         <Image 
                             src={imagePath} 
@@ -53,13 +53,13 @@ export function CardCharacter() {
                             <div className="w-20">
                                 <p>Altura:</p>
                             </div>
-                            <p className="w-40">{value.height}</p> 
+                            <p className="w-40">{value.height / 100}</p> 
                         </div>
                         <div className="flex">
                             <div className="w-20">
-                                <p>Peso (g):</p>
+                                <p>Peso:</p>
                             </div>
-                            <p className="w-40">{value.mass}g</p> 
+                            <p className="w-40">{value.mass} kg</p> 
                         </div>
                     </div>
                     </div>
