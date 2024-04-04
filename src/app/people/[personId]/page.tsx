@@ -14,18 +14,19 @@ interface CharacterProps {
     const [useData, setUseData] = useState<any>([]);
     const [img, setImg] = useState<any>();
 
-    async function respData() {
-        const data = await fetchCaracter(params.personId);
-        setUseData(data)
-        const urlParts = data.url.split('/');
-        const personId = urlParts[urlParts.length - 2];
-        const imagePath = `/${personId}.webp`;
-        setImg(imagePath)
-    }
-
     useEffect(() => {
-        respData()
-    },[])
+        async function respData() {
+            const data = await fetchCaracter(params.personId);
+            setUseData(data)
+            const urlParts = data.url.split('/');
+            const personId = urlParts[urlParts.length - 2];
+            const imagePath = `/${personId}.webp`;
+            setImg(imagePath)
+        }
+    
+        respData(); 
+    
+    }, []);
 
     return(
         <div className="flex flex-col bg-center bg-cover  bg-[url('/R.jpg')]  text-yellow-400 md:flex-row">
@@ -45,7 +46,7 @@ interface CharacterProps {
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center w-2/4 h-screen">
-                <Image src={img} alt="" width={400} height={400} objectFit="cover" />
+                <Image src={img || ''} alt="" width={400} height={400} objectFit="cover" />
              </div>
         </div>
     )

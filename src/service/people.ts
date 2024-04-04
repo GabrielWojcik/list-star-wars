@@ -24,4 +24,5 @@ class starWarsList {
 
 }
 
-export default new starWarsList()
+const starWarsListInstance = new starWarsList();
+export default starWarsListInstance;

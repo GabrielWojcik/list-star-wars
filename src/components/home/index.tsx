@@ -25,8 +25,8 @@ export function CardCharacter() {
                 const personId = urlParts[urlParts.length - 2];
                 const imagePath = `/${personId}.webp`;
                 return(
-                    <Link href={`/people/${personId}`}>
-                    <div key={value.name} className="flex flex-col justify-center items-center md:flex-row bg-white text-black rounded border-yellow-500 border-2 cursor-pointer hover:scale-105">
+                    <Link key={value.name} href={`/people/${personId}`}>
+                    <div className="flex flex-col justify-center items-center md:flex-row bg-white text-black rounded border-yellow-500 border-2 cursor-pointer hover:scale-105">
                     <div className="w-[150px] h-[200px] relative">
                         <Image 
                             src={imagePath} 
