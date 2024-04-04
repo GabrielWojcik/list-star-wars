@@ -39,25 +39,25 @@ export function CardCharacter() {
                     <div className="flex flex-col justify-center items-center p-5">
                         <div className="flex">
                             <div className="w-20">
-                                <p>Nome:</p>
+                                <p>Name:</p>
                             </div>
                             <p className="w-40">{value.name}</p> 
                         </div>
                         <div className="flex">
                             <div className="w-20">
-                                <p>Idade:</p>
+                                <p>Age:</p>
                             </div>
                             <p className="w-40">{value.birth_year}</p> 
                         </div>
                         <div className="flex">
                             <div className="w-20">
-                                <p>Altura:</p>
+                                <p>Height:</p>
                             </div>
                             <p className="w-40">{value.height / 100}</p> 
                         </div>
                         <div className="flex">
                             <div className="w-20">
-                                <p>Peso:</p>
+                                <p>Weight:</p>
                             </div>
                             <p className="w-40">{value.mass} kg</p> 
                         </div>

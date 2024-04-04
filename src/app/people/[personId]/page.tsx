@@ -32,26 +32,25 @@ interface CharacterProps {
     return(
         <>
         <NavBar />
-        {/* <div className=" bg-[url('/R.jpg')]"> */}
-        <div className=" bg-black">
+        <div className=" bg-black h-screen">
             <div className="flex flex-col-reverse items-center justify-center bg-center bg-cove text-yellow-400 md:flex-row">
-                <div className="flex flex-col md:items-start p-5  md:w-2/4 h-full">
-                    <div className=" p-5">
-                        <p className="text-yellow-300">Data de Nascimento</p>
+                <div className="bg-black h-screen w-screen flex flex-col justify-center items-center md:items-start p-5">
+                    <div className="h-screen p-5 bg-black">
+                        <p className="text-yellow-300">Birth Data</p>
                         <p className="text-3xl">{useData?.birth_year}</p>
-                        <p className="text-yellow-300">Cor dos Olhos</p>
+                        <p className="text-yellow-300">Eye color</p>
                         <p className="text-3xl">{useData?.eye_color}</p>
-                        <p className="text-yellow-300">Cor da Roupa</p>
+                        <p className="text-yellow-300">Clothing Color</p>
                         <p className="text-3xl">{useData?.skin_color}</p>
-                        <p className="text-yellow-300">Cor do Cabelo</p>
+                        <p className="text-yellow-300">Hair color</p>
                         <p className="text-3xl">{useData?.hair_color === 'n/a' ? 'Não definido' : useData?.hair_color}</p>
-                        <p className="text-yellow-300">Genêro</p>
+                        <p className="text-yellow-300">Gender</p>
                         <p className="text-3xl">{useData?.gender === 'n/a' ? 'Não definido': useData?.gender}</p>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-center w-screen md:w-2/4 h-screen relative">
+                <div className="flex flex-col py-2 items-center justify-center w-screen   relative">
                     <Image src={img || ''} alt=""  width={200} height={200} objectFit="cover" className="rounded-full" />
-                    <strong className="p-2 text-3xl md:text-7xl text-yellow-400 text-center">
+                    <strong className="p-2 text-3xl md:text-6xl text-yellow-400 text-center">
                          {useData?.name}
                     </strong>
                 </div>
