@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-
     images: {
-        domains: ['swapi.dev']
-    }
-
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'swapi.dev',
+            pathname: '**',
+          },
+        ],
+      },
 };
 
 export default nextConfig;
