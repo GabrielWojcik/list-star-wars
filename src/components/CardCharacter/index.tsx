@@ -32,7 +32,7 @@ export function CardCharacter({ dadosFinais }: { dadosFinais: CharacterData[] })
                          />
                     </div>
                     <div className="flex flex-col justify-center items-center p-5">
-                        <div className="flex">
+                        <div className="flex" data-testid={`value-${value.name}`}>
                             <div className="w-20">
                                 <p>Name:</p>
                             </div>

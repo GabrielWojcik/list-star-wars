@@ -68,7 +68,7 @@ interface CharacterProps {
                 <div className="flex flex-col py-2 items-center justify-center w-screen   relative">
                     <Image src={img || ''} alt=""  width={200} height={200} objectFit="cover" className="rounded-full" />
                     <h1>Name</h1>
-                    <strong className="p-2 text-3xl md:text-6xl text-yellow-400 text-center">
+                    <strong data-testid="people-name" className="p-2 text-3xl md:text-6xl text-yellow-400 text-center">
                          {useData?.name}
                     </strong>
                 </div>
