@@ -11,7 +11,6 @@ interface CharacterData {
 }
 
 export function CardCharacter({ dadosFinais }: { dadosFinais: CharacterData[] }) {
-    console.log('carregando 1',dadosFinais)
     return (
         <div className="flex flex-wrap items-center justify-center gap-5 p-5 bg-black">
         {
