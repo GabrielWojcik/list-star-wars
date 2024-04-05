@@ -6,3 +6,5 @@ Para rodar os testes com cypress (e2e)  <br>
 1 - npm run build  <br>
 2 - npm start  <br>
 3 - npm run cypress:open  <br>
+
+Projeto publicado na Vercel <br> https://star-wars-gray-eight.vercel.app
